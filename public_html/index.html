@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página de Inicio</title>
+<style>
+    body { font-family: Arial, sans-serif; padding-top: 50px; }
+    .navbar, .taskbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .navbar button, .taskbar button {
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 17px;
+        border: none;
+        background: none;
+    }
+    .navbar button:hover, .taskbar button:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .container, .welcome-message, .login-form, .taskbar {
+        max-width: 300px;
+        margin: auto;
+        padding: 20px;
+        display: none;
+    }
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    .container button, .login-form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    .container button:hover, .login-form button:hover { opacity: 0.8; }
+</style>
+<script>
+    function mostrarFormularioRegistro() {
+        document.querySelector('.container').style.display = 'block';
+        document.querySelector('.welcome-message').style.display = 'none';
+        document.querySelector('.login-form').style.display = 'none';
+        document.querySelector('.taskbar').style.display = 'none';
+    }
+
+    function mostrarFormularioLogin() {
+        document.querySelector('.login-form').style.display = 'block';
+        document.querySelector('.welcome-message').style.display = 'none';
+        document.querySelector('.container').style.display = 'none';
+        document.querySelector('.taskbar').style.display = 'none';
+    }
+
+    function mostrarBienvenida() {
+        document.querySelector('.welcome-message').style.display = 'block';
+        document.querySelector('.container').style.display = 'none';
+        document.querySelector('.login-form').style.display = 'none';
+        document.querySelector('.navbar').style.display = 'none';
+        document.querySelector('.taskbar').style.display = 'none';
+    }
+
+    function ingresar() {
+        document.querySelector('.login-form').style.display = 'none';
+        document.querySelector('.navbar').style.display = 'none';
+        document.querySelector('.taskbar').style.display = 'flex';
+    }
+</script>
+</head>
+<body>
+
+<div class="navbar">
+    <button onclick="mostrarFormularioRegistro()">Registrarme</button>
+    <button onclick="mostrarFormularioLogin()">Ingresar</button>
+    <button onclick="mostrarBienvenida()">Home</button>
+</div>
+
+<div class="container">
+    <h2>Formulario de Registro</h2>
+    <form action="/submit_registration" method="post">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="psw">Contraseña:</label>
+        <input type="password" id="psw" name="password" required>
+
+        <button type="submit">Registrarse</button>
+    </form>
+</div>
+
+<div class="login-form">
+    <h2>Formulario de Ingreso</h2>
+    <form action="/submit_login" method="post">
+        <label for="login-username">Nombre:</label>
+        <input type="text" id="login-username" name="username" required>
+
+        <label for="login-psw">Contraseña:</label>
+        <input type="password" id="login-psw" name="password" required>
+
+        <button type="submit">Ingresar</button>
+    </form>
+</div>
+
+<div class="welcome-message">
+    <h2>Bienvenido</h2>
+    <p>¿Que aremos hoy?</p>
+    <button>Lista de Libros</button>
+    <button>Lista de Compras en espera</button>
+    <button>Personas registradas</button>
+    <button>Libros en venta</button>
+    <button>Libros en estado de reserva</button>
+    <button>Cantidad de libros</button>
+</div>
+
+</body>
+</html>
