@@ -1,0 +1,111 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 12 may 2024, 14:31:26
+    Author     : User
+
+*/
+
+body {
+    
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    
+}
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+
+svg {
+	font-family: "Rufina", sans-serif;
+	width: 100%; height: 100%;
+        
+        background-image: url(imag/2.jpg); /* Ruta a tu imagen */
+   
+
+}
+svg text {
+	animation: stroke 8s infinite alternate;
+	stroke-width: 2;
+	stroke: #CD8719;
+	font-size: 53px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(144,85,8,0); stroke: rgba(205,135,25,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(144,85,8,0); stroke: rgba(205,135,25,1); }
+	80%  {fill: rgba(144,85,8,0); stroke: rgba(205,135,25,1); stroke-width: 3; }
+	100% {
+		fill: rgba(144,85,8,1); stroke: rgba(205,135,25,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+.wrapper {background-color: #FFFFFF}; 
+
+/* Estilos generales */
+html, body {
+    background-color: #ffffff;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Color de fondo de la página */
+}
+
+/* Estilos para el contenedor del formulario */
+.login-container {  
+    padding: 20px;
+    width: 600px; /* O ajusta según tus necesidades */
+    transform: translatex(100%);
+    position: absolute;
+    top: 20%; /* Centra la lista verticalmente */
+}
+
+/* Estilos para los títulos y etiquetas */
+h2, label {
+    
+    transform: translatex(20%);
+    
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 30px;
+    font-family: Rye, sans-serif;
+}
+
+/* Estilos para los campos de entrada */
+input[type='text'],
+input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón de envío */
+button {
+  font-family: 'comic sans ms';
+  color: #14396A !important;
+  font-size: 14px;
+  text-shadow: 1px 2px 1px #DEA7C8;
+  box-shadow: 2px 3px 3px #C1B6F9;
+  padding: 10px 28px;
+  border-radius: 24px;
+  border: 0px outset #A167A3;
+  background: #EEABB9;
+  background: linear-gradient(to top, #EEABB9, #A77ACF);
+  transform: translatex(230%);
+}
+button:hover {
+  color: #3A2C57 !important;
+  background: #CFCC82;
+  background: linear-gradient(to top, #CFCC82, #ABEEE3);
+}
+

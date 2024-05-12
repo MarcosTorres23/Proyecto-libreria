@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login</title>
+    <!-- Asegúrate de vincular tu archivo CSS aquí para estilizar el formulario -->
+   <link rel="stylesheet" href ="styles/logcss.css">
+
+</head>
+
+
+    <div class="wrapper">
+	<svg>
+		<text x="50%" y="50%" dy=".35em" text-anchor="middle">
+			Gestion Libreria
+		</text>
+	</svg>
+     </div> 
+ 
+  
+<body>     
+
+    <div class="login-container">
+        <h2><img src=styles/imag/5.jpg alt=""></h2>
+        <form action="/procesar_login" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre de usuario:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
