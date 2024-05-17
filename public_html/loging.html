@@ -10,30 +10,49 @@
 </head>
 
 
-    <div class="wrapper">
-	<svg>
-		<text x="50%" y="50%" dy=".35em" text-anchor="middle">
-			Gestion Libreria
-		</text>
-	</svg>
-     </div> 
- 
-  
-<body>     
+<body>
 
-    <div class="login-container">
-        <h2><img src=styles/imag/5.jpg alt=""></h2>
-        <form action="/procesar_login" method="post">
-            <div class="form-group">
-                <label for="nombre">Nombre de usuario:</label>
-                <input type="text" id="nombre" name="nombre" required>
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                       <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form action="php/login_usuario.php" method="POST" class="formulario__login">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" placeholder="Usuario" name="user">
+                        <input type="password" placeholder="Contraseña" name="contra">
+                        <button>Entrar</button>
+                    </form>
+
+                    <!--Register-->
+                    <form action="php/registro_de_usuario_be.php" method="POST" class="formulario__register">
+                        <h2>Regístrarse</h2>
+                        <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                        <input type="text" placeholder="Correo Electronico" name="correo">
+                        <input type="text" placeholder="Usuario" name="usuario">
+                        <input type="password" placeholder="Contraseña" name="contrasena">
+                        <button>Regístrarse</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required>
-            </div>
-            <button type="submit">Ingresar</button>
-        </form>
-    </div>
+
+        </main>
+
+        <script src="jslog.js"></script>
 </body>
+
 </html>
